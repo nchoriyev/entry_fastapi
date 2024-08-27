@@ -32,3 +32,34 @@ class LoginModel(BaseModel):
             "username": "Nodirbek",
             "password": "1234",
         }
+
+
+class ProductCreateModel(BaseModel):
+    id: Optional[int]
+    name: Optional[str]
+    price: Optional[int]
+
+
+class ProductListModel(BaseModel):
+    name: Optional[str]
+    price: Optional[int]
+
+
+class OrderListModel(BaseModel):
+    id: Optional[int]
+    count: Optional[int]
+    user_id: Optional[int]
+    product_id: Optional[int]
+
+
+class OrderCreateModel(BaseModel):
+    id: Optional[int]
+    count: Optional[int]
+    user_id: Optional[int]
+    product_id: Optional[int]
+
+
+class UserOrderModel(BaseModel):
+    id: Optional[int]
+    product_id: Optional[int]
+    order_id: Optional[int]
